@@ -10,6 +10,6 @@ RSpec.describe Deck do
 
     expect(deck).to be_a(Deck)
 
-    it ''
+    it
 end
 
