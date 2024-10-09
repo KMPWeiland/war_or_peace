@@ -1,5 +1,6 @@
 require 'rspec'
 require './lib/card'
+require 'pry'
 
 RSpec.describe Card do
   it "exists" do
@@ -11,8 +12,10 @@ RSpec.describe Card do
   it "has readable attributes" do
     card = Card.new('diamond', 'Queen', 12)
 
+    binding.pry #test will stop running HERE and will open a pry session in order to inspect the following expect statements
+
     expect(card.suit).to eq('diamond')
-    expect(card.rank).to eq('Queen')
-    expect(card.value).to eq(12)
+    expect(card.value).to eq('Queen')
+    expect(card.rank).to eq(12)
   end
 end
