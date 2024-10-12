@@ -1,11 +1,22 @@
-class Deck
-    attr_reader :cards
+class Player
+    attr_reader :name, 
+                :deck
 
-    def initialize(cards_array)
-        #Deck NEEDS a list of cards in order to be setup
-        @cards = cards_array
+    def initialize(name, deck)
+        #Player NEEDS a deck in order to be setup
+        @name = name
+        @deck = deck
     end
-    
-    def rank_of_card_at(index)
-        @cards[index].rank #this method will take one argument that represents the index location of a card to be used...and will return the rank of that card.
+
+    def has_lost?
+        #Player loses if they have no cards left
+        @deck.cards.empty?
     end
+
+    def remove_card
+        #removes and returns card from deck
+        deck.cards.shift
+    end
+
+
+end
