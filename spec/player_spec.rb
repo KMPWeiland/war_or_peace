@@ -7,9 +7,9 @@ require 'pry'
 describe Deck do
     it "is initialized with an array of Card objects" do
        #creates a few card instances
-       card1 = Card.new('diamond', 'Queen', 12)
-       card2 = Card.new('spade', '3', 3)
-       card3 = Card.new('heart', 'Ace', 14)
+       card1 = Card.new(:diamond, 'Queen', 12)
+       card2 = Card.new(:spade, '3', 3)
+       card3 = Card.new(:heart, 'Ace', 14)
        
        #testing the initialization of the Deck object with this array of Card objects
        deck = Deck.new([card1, card2, card3])
@@ -27,9 +27,9 @@ describe Deck do
 
     it "determines if a Player lost" do
         #creates a few card instances
-        card1 = Card.new('diamond', 'Queen', 12)
-        card2 = Card.new('spade', '3', 3)
-        card3 = Card.new('heart', 'Ace', 14)
+        card1 = Card.new(:diamond, 'Queen', 12)
+        card2 = Card.new(:spade, '3', 3)
+        card3 = Card.new(:heart, 'Ace', 14)
         
         #testing the initialization of the Deck object with this array of Card objects
         deck = Deck.new([card1, card2, card3])
@@ -44,9 +44,9 @@ describe Deck do
 
     it "removes a card from the deck" do
         #creates a few card instances
-        card1 = Card.new('diamond', 'Queen', 12)
-        card2 = Card.new('spade', '3', 3)
-        card3 = Card.new('heart', 'Ace', 14)
+        card1 = Card.new(:diamond, 'Queen', 12)
+        card2 = Card.new(:spade, '3', 3)
+        card3 = Card.new(:heart, 'Ace', 14)
         
         #testing the initialization of the Deck object with this array of Card objects
         deck = Deck.new([card1, card2, card3])
@@ -60,9 +60,9 @@ describe Deck do
 
     it "removes a card from the deck" do
         #creates a few card instances
-        card1 = Card.new('diamond', 'Queen', 12)
-        card2 = Card.new('spade', '3', 3)
-        card3 = Card.new('heart', 'Ace', 14)
+        card1 = Card.new(:diamond, 'Queen', 12)
+        card2 = Card.new(:spade, '3', 3)
+        card3 = Card.new(:heart, 'Ace', 14)
         
         #testing the initialization of the Deck object with this array of Card objects
         deck = Deck.new([card1, card2, card3])
