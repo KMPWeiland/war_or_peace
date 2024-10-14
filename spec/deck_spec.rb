@@ -4,11 +4,11 @@ require './lib/deck'
 require 'pry'
 
 RSpec.describe Deck do
-    xit "is initialized with an array of Card objects" do
+    it "is initialized with an array of Card objects" do
        #creates a few card instances
-       card1 = Card.new('diamond', 'Queen', 12)
-       card2 = Card.new('spade', '3', 3)
-       card3 = Card.new('heart', 'Ace', 14)
+       card1 = Card.new(:diamond, 'Queen', 12)
+       card2 = Card.new(:spade, '3', 3)
+       card3 = Card.new(:heart, 'Ace', 14)
 
         #create an array of Card objects
         cards = [card1, card2, card3]
@@ -20,11 +20,11 @@ RSpec.describe Deck do
         expect(deck.cards).to eq(cards) #deck.cards is like asking what cards are associated w/ THIS deck
     end
 
-    xit "returns the rank of a card at a given index" do 
+    it "returns the rank of a card at a given index" do 
         #create a few Card objects ????why do we need to rewrite this???
-        card1 = Card.new('diamond', 'Queen', 12)
-        card2 = Card.new('spade', '3', 3)
-        card3 = Card.new('heart', 'Ace', 14)
+        card1 = Card.new(:diamond, 'Queen', 12)
+        card2 = Card.new(:spade, '3', 3)
+        card3 = Card.new(:heart, 'Ace', 14)
 
         cards = [card1, card2, card3]
 
@@ -37,11 +37,11 @@ RSpec.describe Deck do
     end     
 
     describe Deck do
-    xit "returns an array of high ranking cards" do
+    it "returns an array of high ranking cards" do
         #creates a few card instances
-        card1 = Card.new('diamond', 'Queen', 12)
-        card2 = Card.new('spade', '3', 3)
-        card3 = Card.new('heart', 'Ace', 14)
+        card1 = Card.new(:diamond, 'Queen', 12)
+        card2 = Card.new(:spade, '3', 3)
+        card3 = Card.new(:heart, 'Ace', 14)
 
         # Initialize the Deck with these cards
         deck = Deck.new([card1, card2, card3])
@@ -52,9 +52,9 @@ RSpec.describe Deck do
 
     it "the percentage of high ranking cards" do
         #creates a few card instances
-        card1 = Card.new('diamond', 'Queen', 12)
-        card2 = Card.new('spade', '3', 3)
-        card3 = Card.new('heart', 'Ace', 14)
+        card1 = Card.new(:diamond, 'Queen', 12)
+        card2 = Card.new(:spade, '3', 3)
+        card3 = Card.new(:heart, 'Ace', 14)
    
         # Initialize the Deck with these cards
         deck = Deck.new([card1, card2, card3])
@@ -64,9 +64,9 @@ RSpec.describe Deck do
 
     it "removes a card" do
         #creates a few card instances
-        card1 = Card.new('diamond', 'Queen', 12)
-        card2 = Card.new('spade', '3', 3)
-        card3 = Card.new('heart', 'Ace', 14)
+        card1 = Card.new(:diamond, 'Queen', 12)
+        card2 = Card.new(:spade, '3', 3)
+        card3 = Card.new(:heart, 'Ace', 14)
    
         # Initialize the Deck with these cards
         deck = Deck.new([card1, card2, card3])
@@ -76,10 +76,10 @@ RSpec.describe Deck do
 
     it "adds a card" do
         #creates a few card instances
-        card1 = Card.new('diamond', 'Queen', 12)
-        card2 = Card.new('spade', '3', 3)
-        card3 = Card.new('heart', 'Ace', 14)
-        card4 = Card.new('club', '5', 5)
+        card1 = Card.new(:diamond, 'Queen', 12)
+        card2 = Card.new(:spade, '3', 3)
+        card3 = Card.new(:heart, 'Ace', 14)
+        card4 = Card.new(:club, '5', 5)
 
         #create an array of Card objects
         cards = [card1, card2, card3, card4]
