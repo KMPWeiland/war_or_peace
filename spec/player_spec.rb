@@ -1,7 +1,7 @@
 require 'rspec'
-require './lib/card'
-require './lib/deck'
-require './lib/player'
+require_relative '../lib/card'
+require_relative '../lib/deck'
+require_relative '../lib/player'
 require 'pry'
 
 describe Deck do
