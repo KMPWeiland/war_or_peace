@@ -15,7 +15,7 @@ class Player
 
     def remove_card
         #removes and returns card from deck
-        deck.cards.shift
+        @deck.cards.shift
     end
 
 
