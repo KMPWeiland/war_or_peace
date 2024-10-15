@@ -25,7 +25,7 @@ describe Deck do
 
     end
 
-    it "determines if a Player lost" do
+    it "determines if a Player has lost" do
         #creates a few card instances
         card1 = Card.new(:diamond, 'Queen', 12)
         card2 = Card.new(:spade, '3', 3)
