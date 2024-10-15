@@ -27,7 +27,7 @@ shuffled_cards = cards.shuffle
 split_deck = shuffled_cards.length / 2
 
 split_deck1 = shuffled_cards[0...split_deck]
-split_deck2 = shuffled_cards[split_deck..-1]
+split_deck2 = shuffled_cards[split_deck..-2]
 
 deck1 = Deck.new(split_deck1)
 deck2 = Deck.new(split_deck2)
