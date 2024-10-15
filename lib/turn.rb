@@ -58,7 +58,10 @@ class Turn
     end
     
     def award_spoils(winner)
-        winner.deck.cards.concat(spoils_of_war)
-        spoils_of_war.clear 
+        puts "Spoils count before awarding: #{@spoils_of_war.count}"
+        winner.deck.cards.concat(@spoils_of_war)
+        @spoils_of_war.clear 
+        puts "#{winner.name} now has #{winner.deck.cards.count} cards."
     end
 end
+
