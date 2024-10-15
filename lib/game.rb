@@ -33,6 +33,7 @@ The players today are Megan and Aurora. Type 'GO' to start the game!"
             turn = Turn.new(player1, player2)
             turn_type = turn.type
             winner = turn.winner
+
             if turn_type == :basic
                 puts "Turn #{@turn_count}: #{winner.name} won two cards."
             elsif turn_type == :war
@@ -40,16 +41,17 @@ The players today are Megan and Aurora. Type 'GO' to start the game!"
             elsif
                 puts "Turn #{@turn_count}: *mutually assured destruction* 6 cards removed from play."
             end
-        end
 
             turn.pile_cards
-            turn.award_spoils(winner) 
-     
+            turn.award_spoils(winner) unless turn_type = :mutually_assured_destruction
+        
+            if @turn_count == 1000000
+                puts "---- DRAW ----"
+                break
+            end
 
-        if @turn_count == 1000000
-            puts "---- DRAW ----"
-            break
         end
+       
 
         if player1.has_lost?
             puts "*~*~*~* #{player2.name} has won the game! *~*~*~*"
