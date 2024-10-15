@@ -145,7 +145,6 @@ end
 
 
 
-
     # it "exists and has 52 cards" do
     #     deck = Deck.new([1..52])
     #     expect(deck).to be_an_instance_of(Deck)
